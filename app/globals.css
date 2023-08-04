@@ -2,26 +2,439 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.mobile-icon {
+  display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+* {
+  scroll-behavior: smooth;
+}
+
+.hide__scrollbar {
+  scrollbar-width: 0px;
+}
+
+.mobile-menu {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  backdrop-filter: blur(2px);
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  display: none;
+}
+.mobile-menu-container {
+  width: 40%;
+  height: 100%;
+  overflow: auto;
+  background-color: white;
+}
+.banner-mobile {
+  display: none;
+}
+
+.nav-none {
+  margin-left: 10rem;
+}
+
+.banner {
+  background-image: url(../public/banner-image.webp);
+  background-position: center;
+  background-size: cover;
+  height: 40vh;
+  background-repeat: no-repeat;
+}
+
+.nike-banner {
+  background-image: url(../public/nike-banner.webp);
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+  background-repeat: no-repeat;
+}
+
+.banner-h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5rem;
+  letter-spacing: -8px;
+  font-weight: bolder;
+  line-height: 1;
+}
+.nike-banner-h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: -2px;
+  font-weight: bolder;
+  line-height: 1;
+}
+.school-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid--school {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: 100%;
+  margin-left: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.grid--school::-webkit-scrollbar {
+  height: 8px;
+}
+.grid--school::-webkit-scrollbar-thumb {
+  background-color: rgb(107, 107, 107);
+  border-radius: 30px;
+}
+.grid--school img {
+  width: 100%;
+  height: 100%;
+}
+.btn {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trending-container {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.trending-container::-webkit-scrollbar {
+  height: 8px;
+}
+.trending-container::-webkit-scrollbar-thumb {
+  background-color: rgb(120, 119, 119);
+  border-radius: 20px;
+}
+.trending-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.trending-image-container {
+  width: 500px;
+  height: 500px;
+}
+
+.trending-container2 {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.trending-container2::-webkit-scrollbar {
+  display: none;
+}
+
+.trending-card2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.trending-image-container2 {
+  width: 400px;
+  height: 400px;
+}
+
+.bggg {
+  font-weight: 500;
+}
+.overlay_button {
+  display: flex;
+  justify-content: space-between;
+}
+.sport_mobile {
+  display: none;
+}
+.member_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.member_content {
+  position: absolute;
+}
+
+/* Slide Bottom */
+
+.slide-bottom {
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(-25%);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(0);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateX(25%);
+    transform: translateX(25%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/* Slide-up */
+
+.slide_bottom {
+  -webkit-animation: slide_bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide_bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide_bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(25%);
+  }
+  100% {
+    -webkit-transform: translateY(50%);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide_bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.foot {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding: 3rem 20%;
+  height: 260px;
+  overflow: hidden;
+}
+.foot:hover {
+  height: 100%;
+}
+.foot p {
+  font-weight: 500;
+}
+
+.foot__links {
+  display: none;
+}
+
+.data__links {
+  display: flex;
+}
+.footer__hide {
+  display: none;
+}
+
+.footer__main {
+  padding: 1rem 15%;
+}
+
+.last__content {
+  justify-content: flex-end;
+}
+@media screen and (max-width: 700px) {
+  .top-links {
+    display: none;
+  }
+
+  .foot {
+    padding: 3rem 2rem;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+  .btn {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+  .school-head {
+    padding: 1rem 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .banner-h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -2px;
+    font-weight: bolder;
+    font-size: 4rem;
+    line-height: 1;
+    text-align: start;
+  }
+
+  .banner {
+    background-image: url(../public/banner-mb.webp);
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+    background-repeat: no-repeat;
+    display: none;
+  }
+  .banner-mobile {
+    display: block;
+  }
+  .banner2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .foot {
+    padding: 3rem 4rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .mobile-icon {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+  .nav-none {
+    display: none;
+  }
+  .grid--school img {
+    width: 450px;
+    height: 300px;
+  }
+  .member_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .foot {
+    padding: 3rem 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .banner-h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -2px;
+    font-weight: bolder;
+    font-size: 3rem;
+    line-height: 1;
+    text-align: start;
+  }
+  .mobile-menu-container {
+    width: 60%;
+    height: 100%;
+    overflow: auto;
+    background-color: white;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .footer__main {
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .arrow_btn {
+    display: none;
+  }
+
+  .footer__hide {
+    display: flex;
+    border-top: 0.1px solid rgb(113, 113, 113);
+    padding-top: 2rem;
+  }
+
+  .grid--school {
+    margin-left: 0rem;
+  }
+  .searchbar {
+    display: none;
+  }
+
+  .grid--school img {
+    width: 100%;
+    height: 100%;
+  }
+  .last__content {
+    justify-content: flex-start;
+  }
+  .data__links {
+    display: none;
+  }
+  .trending-container::-webkit-scrollbar {
+    display: none;
+  }
+  .trending-image-container {
+    width: 300px;
+    height: 300px;
+  }
+  .trending-image-container2 {
+    width: 300px;
+    height: 300px;
+  }
+  .grid--school::-webkit-scrollbar {
+    display: none;
+  }
+  .sport_mobile {
+    display: block;
+  }
+  .sport_desktop {
+    display: none;
+  }
+
+  .banner-h1 {
+    font-size: 2.5rem;
+  }
+  .member_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sport__img {
+    width: 100px;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .foot {
+    padding: 3rem 0.5rem;
+    gap: 1rem;
+  }
+
+  .foot {
+    display: none;
+  }
+  .foot__links {
+    display: block;
+  }
+}
+
+.sport__img {
+  width: 200px;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+  width: 100%;
 }
