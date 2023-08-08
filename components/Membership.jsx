@@ -5,7 +5,7 @@ const Membership = () => {
   return (
     <div className="p-2">
       <p className="text-[22px] bggg p-6">Nike Membership</p>
-      <div className="nike-banner p-6">
+      <div className="nike-banner nike-banner2 p-6">
         <h1 className="text-[3rem] nike-banner-h1 text-white mb-5 mt-2">
           BECOME A <br /> MEMBER
         </h1>

@@ -52,7 +52,7 @@
   background-image: url(../public/nike-banner.webp);
   background-position: center;
   background-size: cover;
-  height: 30vh;
+  height: 100%;
   background-repeat: no-repeat;
 }
 
@@ -354,6 +354,9 @@
     display: none;
   }
 
+  .nike-banner {
+    display: none;
+  }
   .footer__hide {
     display: flex;
     border-top: 0.1px solid rgb(113, 113, 113);
